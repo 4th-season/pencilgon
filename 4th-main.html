@@ -1,0 +1,578 @@
+<!-- =========================================================
+4번째 계절 ; 새 세계관 안내글 HTML
+H1 없이 사용 / 티스토리 본문 HTML 모드용
+기존 이미지 유지 / 6 Re:Lenz + Note + HAVE+ 구조
+========================================================= -->
+<div>
+<style>
+  .rl-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 8px 4px 40px;
+    font-family: inherit;
+    color: #252525;
+    line-height: 1.78;
+    word-break: keep-all;
+  }
+
+  .rl-wrap * {
+    box-sizing: border-box;
+  }
+
+  .rl-meta {
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    border-left: 5px solid #5b6f47;
+    background: #f4f8ef;
+    border-radius: 10px;
+    color: #34452d;
+    font-size: 0.98rem;
+  }
+
+  .rl-hero {
+    margin: 0 0 34px;
+    padding: 32px 26px;
+    background: linear-gradient(135deg, #f8fbf2 0%, #eef5e7 100%);
+    border: 1px solid #d9e7ce;
+    border-radius: 18px;
+  }
+
+  .rl-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    background: #5b6f47;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .rl-title-like {
+    margin: 0 0 8px;
+    font-size: 1.85rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #2f3b28;
+    letter-spacing: -0.045em;
+  }
+
+  .rl-subtitle-like {
+    margin: 0 0 18px;
+    font-size: 1.12rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #5b6f47;
+  }
+
+  .rl-hero p {
+    margin: 0 0 12px;
+    font-size: 1.03rem;
+  }
+
+  .rl-hero p:last-child {
+    margin-bottom: 0;
+  }
+
+  .rl-box {
+    margin: 30px 0;
+    padding: 22px 22px;
+    background: #fff;
+    border: 1px solid #dfe9d5;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(40, 70, 25, 0.04);
+  }
+
+  .rl-box-title {
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #2f3b28;
+  }
+
+  .rl-box p {
+    margin: 0 0 12px;
+  }
+
+  .rl-map {
+    margin: 28px 0;
+    padding: 22px;
+    background: #fbfdf8;
+    border: 1px solid #d9e7ce;
+    border-radius: 16px;
+  }
+
+  .rl-map-title {
+    margin: 0 0 16px;
+    font-weight: 800;
+    font-size: 1.16rem;
+    color: #2f3b28;
+  }
+
+  .rl-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .rl-grid-item {
+    padding: 16px 16px;
+    background: #fff;
+    border: 1px solid #dfe9d5;
+    border-radius: 13px;
+  }
+
+  .rl-grid-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #5b6f47;
+    font-size: 1.02rem;
+  }
+
+  .rl-grid-item span {
+    display: block;
+    color: #555;
+    font-size: 0.94rem;
+  }
+
+  .rl-toc {
+    margin: 34px 0;
+    padding: 22px;
+    background: #f4f8ef;
+    border: 1px solid #d9e7ce;
+    border-radius: 16px;
+  }
+
+  .rl-toc-title {
+    margin: 0 0 14px;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #2f3b28;
+  }
+
+  .rl-toc details {
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #dfe9d5;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .rl-toc summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: #34452d;
+    list-style: none;
+  }
+
+  .rl-toc summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .rl-toc summary::after {
+    content: "▼";
+    float: right;
+    font-size: 0.82rem;
+    color: #6d805f;
+  }
+
+  .rl-toc details[open] summary::after {
+    content: "▲";
+  }
+
+  .rl-toc-desc {
+    padding: 0 16px 15px;
+    color: #555;
+    font-size: 0.95rem;
+    border-top: 1px solid #e8f0df;
+  }
+
+  .rl-section {
+    margin: 40px 0;
+    padding: 28px 24px;
+    background: #fff;
+    border: 1px solid #dfe9d5;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(40, 70, 25, 0.035);
+  }
+
+  .rl-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #5b6f47;
+    font-size: 1.42rem;
+    line-height: 1.42;
+    color: #2f3b28;
+    letter-spacing: -0.035em;
+  }
+
+  .rl-section h3 {
+    margin: 24px 0 12px;
+    font-size: 1.12rem;
+    color: #34452d;
+  }
+
+  .rl-one-line {
+    margin: 0 0 18px;
+    padding: 13px 15px;
+    background: #f4f8ef;
+    border-radius: 12px;
+    color: #34452d;
+    font-weight: 600;
+  }
+
+  .rl-section p {
+    margin: 0 0 14px;
+  }
+
+  .rl-list {
+    margin: 18px 0 0;
+    padding: 18px 20px;
+    background: #fbfdf8;
+    border: 1px solid #dfe9d5;
+    border-radius: 13px;
+  }
+
+  .rl-list-title {
+    margin: 0 0 10px;
+    font-weight: 800;
+    color: #34452d;
+  }
+
+  .rl-list ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .rl-list li {
+    margin: 7px 0;
+  }
+
+  .rl-quote {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: #f8fbf2;
+    border-left: 5px solid #5b6f47;
+    border-radius: 10px;
+    color: #2f3b28;
+    font-weight: 700;
+  }
+
+  .rl-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 24px 0 4px;
+  }
+
+  .rl-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    font-size: 0.95rem;
+  }
+
+  .rl-table th {
+    background: #5b6f47;
+    color: #fff;
+    padding: 12px 10px;
+    border: 1px solid #d6e3ca;
+    text-align: left;
+  }
+
+  .rl-table td {
+    padding: 12px 10px;
+    border: 1px solid #d6e3ca;
+    vertical-align: top;
+    background: #fff;
+  }
+
+  .rl-table tr:nth-child(even) td {
+    background: #fbfdf8;
+  }
+
+  .rl-linkbox {
+    margin-top: 20px;
+    padding: 16px 18px;
+    background: #fbfdf8;
+    border: 1px dashed #8fa87d;
+    border-radius: 12px;
+  }
+
+  .rl-linkbox strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #5b6f47;
+  }
+
+  .rl-linkbox a {
+    display: inline-block;
+    margin: 3px 10px 3px 0;
+    color: #5b6f47;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .rl-linkbox a:hover {
+    text-decoration: underline;
+  }
+
+  .rl-final {
+    margin: 42px 0 0;
+    padding: 26px 24px;
+    background: #2f3b28;
+    color: #fff;
+    border-radius: 18px;
+  }
+
+  .rl-final h2 {
+    margin: 0 0 14px;
+    font-size: 1.34rem;
+    color: #fff;
+  }
+
+  .rl-final p {
+    margin: 0 0 12px;
+  }
+
+  .rl-tags {
+    margin: 28px 0 0;
+    padding: 18px 20px;
+    background: #f1f5ed;
+    border-radius: 14px;
+    color: #3f4a39;
+    font-size: 0.94rem;
+  }
+
+  @media (max-width: 640px) {
+    .rl-title-like {
+      font-size: 1.46rem;
+    }
+
+    .rl-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rl-section {
+      padding: 24px 18px;
+    }
+
+    .rl-section h2 {
+      font-size: 1.28rem;
+    }
+  }
+</style>
+</div>
+<div class="rl-wrap"><!-- 메타글 -->
+<div class="rl-meta">4번째 계절 안내 페이지입니다. 6 Re:Lenz, Note, HAVE+로 이어지는 지식 구조를 소개하고, 세상 읽기와 삶의 조율을 연결해 살펴봅니다.</div>
+[##_Image|kage@b30wkv/dJMcabK5vis/AAAAAAAAAAAAAAAAAAAAADijar-SyBh4HgFBIaQvDO8D6B3TmZsKatzs6lRsMCtN/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires=1785509999&amp;allow_ip=&amp;allow_referer=&amp;signature=gwjbcC0wtuKuX5qGG%2FQzk0BPD5s%3D|CDM|1.3|{"originWidth":500,"originHeight":500,"style":"alignCenter","filename":"4번째 계절 타이틀 이미지 (3).png"}_##]<br /><!-- 안내 영역 -->
+<section class="rl-hero">
+<p data-ke-size="size16">&nbsp;</p>
+<div class="rl-kicker">4번째 계절</div>
+<h1 class="rl-title-like" data-ke-size="size30">4번째 계절 안내<br />세상을 읽고 삶을 다시 조율하는 지식 아카이브</h1>
+<div class="rl-subtitle-like">6 Re:Lenz &middot; Note &middot; HAVE+</div>
+<p data-ke-size="size16">삶의 어느 지점에 이르면, 우리는 더 빨리 달리는 방법보다 앞으로의 시간을 어떻게 해석하고 정리할 것인지 먼저 묻게 됩니다.</p>
+<p data-ke-size="size16">지나온 시간은 경험으로 남고, 지금의 사회는 매일 새로운 질문을 던지며, 관계와 언어와 생활의 기준도 조금씩 달라집니다.</p>
+<p data-ke-size="size16">그래서 필요한 것은 흩어진 정보를 더 많이 쌓는 일이 아니라, 세상을 바라보는 렌즈와 그것을 이해하는 도구, 그리고 삶에 적용할 방향을 함께 갖추는 일입니다.</p>
+<p data-ke-size="size16"><b>4번째 계절</b>은 이 흐름을 하나로 묶어 둔 안내 지도입니다.</p>
+<p data-ke-size="size16">여기서는 6 Re:Lenz로 사회와 고전, 상징과 철학, 관계의 말과 경제의 흐름을 읽고, Note로 이해의 기본기를 다지며, HAVE+로 중년 이후의 삶을 차분히 다시 조율합니다.</p>
+</section>
+<!-- 전체 방향 -->
+<section class="rl-box">
+<div class="rl-box-title">4번째 계절은 어떤 공간인가</div>
+<p data-ke-size="size16">4번째 계절은 세상과 사람, 언어와 삶을 따로 떼어 보지 않습니다. 지금의 사회를 읽고, 오래된 고전을 다시 읽고, 상징과 철학, 관계의 말과 경제의 흐름을 함께 살핍니다.</p>
+<p data-ke-size="size16">다만 읽는 것에서 멈추지 않습니다. 읽은 것을 이해의 도구로 다듬고, 결국에는 앞으로의 삶을 다시 설계하는 방향으로 이어 갑니다.</p>
+<p data-ke-size="size16">그래서 4번째 계절의 새 구조는 <b>6 Re:Lenz</b>, <b>Note</b>, <b>HAVE+</b>로 정리됩니다.</p>
+</section>
+<!-- 세 가지 축 -->
+<section class="rl-map">
+<div class="rl-map-title">4번째 계절의 세 가지 축</div>
+<div class="rl-grid">
+<div class="rl-grid-item"><a href="https://4th-season.tistory.com/17" target="_blank" rel="noopener"><b>6 Re:Lenz (바로가기)</b></a><span>Re:Site, Re:Read, Re:Sign, Re:Think, Re:Word, Re:Mark로 세상을 읽는 여섯 개의 대표 시리즈입니다.</span></div>
+<div class="rl-grid-item"><a href="https://gugeoro.tistory.com/265" target="_blank" rel="noopener"><b>Note (바로가기)</b></a><span>문법, 독서, 문학, 문해력 한자어, 국어공방을 통해 세상을 이해하는 도구를 다룹니다.</span></div>
+<div class="rl-grid-item"><a href="https://old-newbie.tistory.com/92" target="_blank" rel="noopener"><b>HAVE+ (바로가기)</b></a><span>중년 이후의 몸, 마음, 관계, 시간, 재산을 살피며 새로운 삶을 설계하는 영역입니다.</span></div>
+<div class="rl-grid-item"><b>하나의 흐름</b> <span>세상을 읽고, 이해의 힘을 기르며, 다가오는 삶을 다시 설계하는 구조입니다.</span></div>
+</div>
+</section>
+<!-- 목차 --><nav class="rl-toc">
+<div class="rl-toc-title">목차</div>
+<details open="">
+<summary>1. 4번째 계절의 기본 구조</summary>
+<div class="rl-toc-desc">6 Re:Lenz, Note, HAVE+로 이어지는 새 세계관을 정리합니다.</div>
+</details><details>
+<summary>2. 6 Re:Lenz &mdash; 세상을 읽는 여섯 개의 렌즈</summary>
+<div class="rl-toc-desc">Re:Site, Re:Read, Re:Sign, Re:Think, Re:Word, Re:Mark의 역할을 설명합니다.</div>
+</details><details>
+<summary>3. Note &mdash; 세상을 이해하는 도구</summary>
+<div class="rl-toc-desc">문법, 독서, 문학, 문해력 한자어, 국어공방을 이해의 도구로 정리합니다.</div>
+</details><details>
+<summary>4. HAVE+ &mdash; 새로운 삶의 설계</summary>
+<div class="rl-toc-desc">몸, 마음, 관계, 시간, 재산이 쉽게 늙지 않도록 삶을 다시 설계하는 영역입니다.</div>
+</details><details>
+<summary>5. 읽기에서 설계로 이어지는 흐름</summary>
+<div class="rl-toc-desc">세상 읽기가 삶의 설계로 이어지는 이유를 정리합니다.</div>
+</details><details>
+<summary>6. 4번째 계절의 한 문장</summary>
+<div class="rl-toc-desc">4번째 계절의 정체성을 한 문장으로 정리합니다.</div>
+</details></nav><!-- 1 -->
+<section class="rl-section">
+<h2 data-ke-size="size26">1. 4번째 계절의 기본 구조</h2>
+<div class="rl-one-line">📘 4번째 계절은 현재를 읽고, 이해의 도구를 다듬고, 새로운 삶을 설계하는 공간입니다.</div>
+<p data-ke-size="size16">4번째 계절은 세 가지 축으로 구성됩니다.</p>
+<div class="rl-list">
+<div class="rl-list-title">4번째 계절의 핵심 구조</div>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><b>6 Re:Lenz</b> &mdash; 세상을 읽는 렌즈</li>
+<li><b>Note</b> &mdash; 세상을 이해하는 도구</li>
+<li><b>HAVE+</b> &mdash; 새로운 삶의 설계</li>
+</ul>
+</div>
+<p data-ke-size="size16">세상을 읽기 위해서는 먼저 렌즈가 필요합니다. 하지만 렌즈만으로는 충분하지 않습니다. 읽는 힘이 있어야 하고, 읽은 것을 삶에 적용할 방향도 있어야 합니다.</p>
+<p data-ke-size="size16">그래서 4번째 계절은 <b>6 Re:Lenz로 세상을 읽고</b>, <b>Note로 이해의 힘을 기르며</b>, <b>HAVE+로 새로운 삶을 설계하는 구조</b>를 갖습니다.</p>
+<div class="rl-quote">4번째 계절은 현재를 제대로 읽고, 다가오는 새로운 삶을 설계하기 위한 지식 아카이브입니다.</div>
+</section>
+[##_Image|kage@d6AwAU/dJMcagMmBl8/AAAAAAAAAAAAAAAAAAAAAMAChJM4YFeWg1TsV8KbBJqtJbYr6PpiU8Bl1rMyPCR5/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires=1785509999&amp;allow_ip=&amp;allow_referer=&amp;signature=JfNgWqnBVt1t7WtFdpHaFmhlM2Y%3D|CDM|1.3|{"originWidth":1600,"originHeight":912,"style":"alignCenter","filename":"중년남자가 글을쓰는 모습.jpg"}_##]<br /><!-- 2 -->
+<section class="rl-section">
+<h2 data-ke-size="size26">2. 6 Re:Lenz &mdash; 세상을 읽는 여섯 개의 렌즈</h2>
+<div class="rl-one-line">🔎 세상은 하나의 방식으로만 읽히지 않습니다.</div>
+<p data-ke-size="size16">현재의 현상으로 읽을 수도 있고, 과거의 고전으로 읽을 수도 있습니다. 상징과 철학, 말과 가치의 흐름으로도 세상을 읽을 수 있습니다.</p>
+<p data-ke-size="size16"><b>6 Re:Lenz</b>는 4번째 계절이 세상을 읽기 위해 사용하는 여섯 개의 대표 시리즈입니다.</p>
+<p data-ke-size="size16">여기서 <b>Re:Site</b>, <b>Re:Read</b>, <b>Re:Sign</b>, <b>Re:Think</b>, <b>Re:Word</b>, <b>Re:Mark</b>는 각각의 대표 시리즈명입니다. 각 시리즈는 현대사회, 고전, 상징, 철학, 관계 언어, 경제라는 서로 다른 주제 영역을 다룹니다.</p>
+<div class="rl-list">
+<div class="rl-list-title">6 Re:Lenz 구성</div>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><b>Re:Site 현대사회 개념사전</b> &mdash; 현재를 통해 현재를 읽다</li>
+<li><b>Re:Read 고전 읽기</b> &mdash; 과거를 통해 현재를 읽다</li>
+<li><b>Re:Sign 현대 상징사전</b> &mdash; 상징에 쌓인 의미를 읽다</li>
+<li><b>Re:Think 현대 철학사전</b> &mdash; 생각의 틀을 읽다</li>
+<li><b>Re:Word 관계언어사전</b> &mdash; 말의 틈을 읽다</li>
+<li><b>Re:Mark 쉬운 경제사전</b> &mdash; 세상이 가치를 매기는 방식을 읽다</li>
+</ul>
+</div>
+<h3 data-ke-size="size23">Re:Site 현대사회 개념사전</h3>
+<p data-ke-size="size16"><b>Re:Site 현대사회 개념사전</b>은 지금 벌어지는 현상을 통해 현재의 사회를 읽는 시리즈입니다. 권력, 책임, 알고리즘, 플랫폼, 미래불안, 번아웃 같은 개념들은 단순한 유행어나 시사 용어가 아닙니다. 그 안에는 지금 사람들이 무엇에 흔들리고, 어떤 구조 속에서 살아가는지가 담겨 있습니다.</p>
+<h3 data-ke-size="size23">Re:Read 고전 읽기</h3>
+<p data-ke-size="size16"><b>Re:Read 고전 읽기</b>는 오래된 글을 오늘의 삶으로 다시 읽는 시리즈입니다. 고전은 지나간 시대의 낡은 문장이 아니라 오래 살아남은 질문에 가깝습니다. 과거의 문장을 빌려 오늘의 삶을 다시 묻습니다.</p>
+<h3 data-ke-size="size23">Re:Sign 현대 상징사전</h3>
+<p data-ke-size="size16"><b>Re:Sign 현대 상징사전</b>은 상징을 통해 인간과 문화를 읽는 시리즈입니다. 꽃, 색, 숫자, 동물, 신화, 방향, 문양 같은 것들은 단순한 장식이 아닙니다. 사람들은 보이는 것에 보이지 않는 의미를 담아 왔고, 그 의미는 사회 속에서 반복되며 쌓여 왔습니다.</p>
+<h3 data-ke-size="size23">Re:Think 현대 철학사전</h3>
+<p data-ke-size="size16"><b>Re:Think 현대 철학사전</b>은 세상을 바라보는 생각의 틀을 읽는 시리즈입니다. 철학은 어려운 이론을 외우는 일이 아니라, 무엇을 중요하게 볼 것인지, 어떤 기준으로 판단할 것인지 묻는 일입니다.</p>
+<h3 data-ke-size="size23">Re:Word 관계언어사전</h3>
+<p data-ke-size="size16"><b>Re:Word 관계언어사전</b>은 사람 사이에서 오가는 말의 틈을 읽는 시리즈입니다. &ldquo;괜찮아&rdquo;, &ldquo;됐어&rdquo;, &ldquo;별일 아니야&rdquo;, &ldquo;신경 쓰지 마&rdquo; 같은 말은 상황과 관계에 따라 전혀 다른 의미를 가집니다.</p>
+<h3 data-ke-size="size23">Re:Mark 쉬운 경제사전</h3>
+<p data-ke-size="size16"><b>Re:Mark 쉬운 경제사전</b>은 돈과 시장을 통해 세상이 가치를 매기는 방식을 읽는 시리즈입니다. 경제는 단순히 돈을 버는 기술이 아니라, 사회가 무엇에 값을 매기고 어떤 선택을 반복하는지 보여 주는 구조입니다.</p>
+<div class="rl-linkbox"><b>바로가기</b> <a title="현대사회 개념사전 바로가기" href="https://pencilgon.tistory.com/221" target="_blank" rel="noopener">Re:Site 현대사회 개념사전</a> <a title="고전 새로읽기 바로가기" href="https://pencilgon.tistory.com/231" target="_blank" rel="noopener">Re:Read 고전 읽기</a> <a title="현대 상징사전 바로가기" href="https://pencilgon.tistory.com/category/%ED%98%84%EB%8C%80%20%EC%83%81%EC%A7%95%EC%82%AC%EC%A0%84" target="_blank" rel="noopener">Re:Sign 현대 상징사전</a> <a title="현대 철학사전 바로가기" href="https://pencilgon.tistory.com/category/%ED%98%84%EB%8C%80%20%EC%B2%A0%ED%95%99%EC%82%AC%EC%A0%84" target="_blank" rel="noopener">Re:Think 현대 철학사전</a> <a title="관계언어사전 바로가기" href="https://pencilgon.tistory.com/category/%ED%98%84%EB%8C%80%EC%9D%B8%20%EC%9E%90%EA%B8%B0%EC%96%91%EC%9C%A1%EC%82%AC%EC%A0%84/%EA%B4%80%EA%B3%84%20%EC%96%B8%EC%96%B4%20%EC%82%AC%EC%A0%84" target="_blank" rel="noopener">Re:Word 관계언어사전</a> <a title="쉬운 경제사전 바로가기" href="https://pencilgon.tistory.com/category/%EC%89%AC%EC%9A%B4%20%EA%B2%BD%EC%A0%9C%20%EC%82%AC%EC%A0%84" target="_blank" rel="noopener">Re:Mark 쉬운 경제사전</a></div>
+</section>
+<!-- 3 -->
+<section class="rl-section">
+<h2 data-ke-size="size26">3. Note &mdash; 세상을 이해하는 도구</h2>
+<div class="rl-one-line">📝 좋은 렌즈가 있어도 읽는 힘이 부족하면 세상은 흐릿하게 보입니다.</div>
+<p data-ke-size="size16">세상을 읽기 위해서는 도구가 필요합니다. 문장을 정확히 읽고, 말의 구조를 이해하고, 글의 맥락을 파악하며, 작품과 생각을 해석하는 힘이 필요합니다.</p>
+<p data-ke-size="size16"><b>Note</b>는 세상을 이해하는 도구입니다.</p>
+<p data-ke-size="size16">문법, 독서, 문학은 단순한 학교 공부가 아닙니다. 생각을 정리하고, 글을 읽고, 사람과 사회를 이해하기 위한 기본 도구입니다.</p>
+<div class="rl-list">
+<div class="rl-list-title">Note가 다루는 도구들</div>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><b>Note: 문법</b> &mdash; 말의 구조를 이해하는 도구</li>
+<li><b>Note: 독서</b> &mdash; 글의 흐름과 생각을 읽는 도구</li>
+<li><b>Note: 문학</b> &mdash; 사람과 삶의 장면을 읽는 도구</li>
+<li><b>문해력 한자어</b> &mdash; 말의 뿌리와 의미의 계열을 읽는 도구</li>
+<li><b>국어공방</b> &mdash; 말의 차이와 쓰임을 다듬는 도구</li>
+</ul>
+</div>
+<p data-ke-size="size16">문해력 한자어와 국어공방 역시 같은 흐름 위에 있습니다. 말의 뿌리와 차이를 이해할 때, 우리는 세상을 조금 더 정확히 읽을 수 있습니다.</p>
+<p data-ke-size="size16">Note는 지식을 늘리기 위한 메모가 아니라, 세상을 읽기 위한 이해의 도구를 다루는 영역입니다.</p>
+<div class="rl-linkbox"><b>바로가기</b> <a title="문해력 한자사전 바로가기" href="https://gugeoro.tistory.com/category/%EB%AC%B8%ED%95%B4%EB%A0%A5%20%ED%95%9C%EC%9E%90%EC%82%AC%EC%A0%84" target="_blank" rel="noopener">문해력 한자어</a> <a title="문법 완전정복 바로가기" href="https://gugeoro.tistory.com/category/%EA%B5%AD%EC%96%B4%20%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8C%20%28%EB%AC%B8%EB%B2%95%29" target="_blank" rel="noopener">Note: 문법</a> <a title="독서 개념 완전정리 바로가기" href="https://gugeoro.tistory.com/category/%EA%B5%AD%EC%96%B4%20%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8C%20%28%EB%8F%85%EC%84%9C%29" target="_blank" rel="noopener">Note: 독서</a> <a title="문학 개념 완전정리 바로가기" href="https://gugeoro.tistory.com/category/%EA%B5%AD%EC%96%B4%20%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8C%20%28%EB%AC%B8%ED%95%99%29" target="_blank" rel="noopener">Note: 문학</a></div>
+</section>
+<!-- 4 -->
+<section class="rl-section">
+<h2 data-ke-size="size26">4. HAVE+ &mdash; 새로운 삶의 설계</h2>
+<div class="rl-one-line">🌿 세상을 읽는 이유는 지식을 쌓기 위해서만은 아닙니다.</div>
+<p data-ke-size="size16">읽고, 이해하고, 판단한 것을 결국 삶에 적용하기 위해서입니다. 그래서 4번째 계절의 마지막 축은 <b>HAVE+</b>, 새로 공부하고, 이어지는 새로운 삶의 설계입니다.</p>
+<p data-ke-size="size16"><b>HAVE+</b>는 중년 이후의 삶을 다시 설계하기 위한 실천 영역입니다.</p>
+<p data-ke-size="size16">여기서 새로운 삶이란 갑자기 전혀 다른 사람이 되는 삶이 아닙니다. 오히려 지금까지 살아온 시간을 바탕으로, 앞으로의 시간을 조금 더 단단하게 조정하는 삶입니다.</p>
+<p data-ke-size="size16">몸, 마음, 관계, 시간, 재산이 쉽게 늙지 않도록 삶을 다시 살피는 일. 무너진 것을 억지로 되돌리는 것이 아니라, 앞으로 더 오래 지켜야 할 것들을 천천히 정비하는 일.</p>
+<p data-ke-size="size16">HAVE+는 그런 삶의 설계를 다룹니다.</p>
+<div class="rl-list">
+<div class="rl-list-title">HAVE+의 다섯 지킴이</div>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><b>몸 지킴이</b> &mdash; 몸이 쉽게 무너지지 않도록 관리하는 삶</li>
+<li><b>마음 지킴이</b> &mdash; 마음이 쉽게 낡지 않도록 돌보는 삶</li>
+<li><b>관계 지킴이</b> &mdash; 관계가 쉽게 닳아 없어지지 않도록 살피는 삶</li>
+<li><b>시간 지킴이</b> &mdash; 배움과 습관으로 시간을 다시 설계하는 삶</li>
+<li><b>재산 지킴이</b> &mdash; 삶의 기반이 쉽게 흔들리지 않도록 준비하는 삶</li>
+</ul>
+</div>
+<p data-ke-size="size16">저속노화, 평생학습, 감정문해력, 자기양육, Re:Build, 은퇴설계와 같은 주제들은 모두 이 흐름 안에 있습니다.</p>
+<div class="rl-quote">HAVE+<br />새로운 삶의 설계</div>
+<div class="rl-linkbox"><b>바로가기</b> <a title="저속노화의 길 바로가기" href="https://pencilgon.tistory.com/category/%ED%98%84%EB%8C%80%EC%9D%B8%20%EC%9E%90%EA%B8%B0%EC%96%91%EC%9C%A1%EC%82%AC%EC%A0%84/%EC%9E%90%EA%B8%B0%20%EC%96%91%EC%9C%A1%EC%82%AC%EC%A0%84" target="_blank" rel="noopener">자기양육사전</a>&nbsp;<a title="감정 문해력 바로가기" href="https://old-newbie.tistory.com/category/%ED%8F%89%EC%83%9D%ED%95%99%EC%8A%B5%EC%9D%98%20%EA%B8%B8/%EA%B0%90%EC%A0%95%20%EB%AC%B8%ED%95%B4%EB%A0%A5" target="_blank" rel="noopener">감정 문해력</a> <a title="몸지킴이 바로가기" href="https://old-newbie.tistory.com/category/%EC%A0%80%EC%86%8D%EB%85%B8%ED%99%94%EC%9D%98%20%EA%B8%B8/%EB%AA%B8%20%EC%A7%80%ED%82%B4%EC%9D%B4" target="_blank" rel="noopener">몸 지킴이</a> <a title="마음지킴이 바로가기" href="https://old-newbie.tistory.com/category/%EC%A0%80%EC%86%8D%EB%85%B8%ED%99%94%EC%9D%98%20%EA%B8%B8/%EB%A7%88%EC%9D%8C%20%EC%A7%80%ED%82%B4%EC%9D%B4" target="_blank" rel="noopener">마음 지킴이</a> <a title="관계지킴이 바로가기" href="https://old-newbie.tistory.com/category/%EC%A0%80%EC%86%8D%EB%85%B8%ED%99%94%EC%9D%98%20%EA%B8%B8/%EA%B4%80%EA%B3%84%20%EC%A7%80%ED%82%B4%EC%9D%B4" target="_blank" rel="noopener">관계 지킴이</a> <a title="시간지킴이 바로가기" href="https://old-newbie.tistory.com/category/%EC%A0%80%EC%86%8D%EB%85%B8%ED%99%94%EC%9D%98%20%EA%B8%B8/%EC%8B%9C%EA%B0%84%20%EC%A7%80%ED%82%B4%EC%9D%B4" target="_blank" rel="noopener">시간 지킴이</a> <a title="재산지킴이 바로가기" href="https://old-newbie.tistory.com/category/%EC%A0%80%EC%86%8D%EB%85%B8%ED%99%94%EC%9D%98%20%EA%B8%B8/%EC%9E%AC%EC%82%B0%20%EC%A7%80%ED%82%B4%EC%9D%B4" target="_blank" rel="noopener">재산 지킴이</a></div>
+</section>
+<!-- 5 -->
+<section class="rl-section">
+<h2 data-ke-size="size26">5. 읽기에서 설계로 이어지는 흐름</h2>
+<div class="rl-one-line">🧭 4번째 계절은 읽기에서 멈추지 않고 삶의 방향으로 이어집니다.</div>
+<p data-ke-size="size16">4번째 계절은 빠른 성공을 약속하지 않습니다. 대신 천천히 읽고, 조금 더 정확히 이해하고, 자신의 삶을 다시 설계하는 힘을 중요하게 봅니다.</p>
+<p data-ke-size="size16">현재를 모르면 삶의 방향은 흔들립니다. 과거를 모르면 현재를 깊이 볼 수 없습니다. 상징을 모르면 문화의 결을 놓치기 쉽습니다. 생각의 틀을 모르면 판단이 남의 말에 끌려갑니다. 말의 틈을 모르면 관계를 오해하기 쉽습니다. 가치의 움직임을 모르면 생활의 구조를 읽기 어렵습니다.</p>
+<p data-ke-size="size16">그래서 4번째 계절은 세상을 여러 렌즈로 읽습니다.</p>
+<div class="rl-list">
+<div class="rl-list-title">4번째 계절의 읽기 흐름</div>
+<ul style="list-style-type: disc;" data-ke-list-type="disc">
+<li><b>Re:Site 현대사회 개념사전</b>으로 현재를 읽습니다.</li>
+<li><b>Re:Read 고전 읽기</b>로 과거를 다시 읽습니다.</li>
+<li><b>Re:Sign 현대 상징사전</b>으로 상징에 쌓인 의미를 읽습니다.</li>
+<li><b>Re:Think 현대 철학사전</b>으로 생각의 틀을 읽습니다.</li>
+<li><b>Re:Word 관계언어사전</b>으로 말의 틈을 읽습니다.</li>
+<li><b>Re:Mark 쉬운 경제사전</b>으로 세상이 가치를 매기는 방식을 읽습니다.</li>
+</ul>
+</div>
+<p data-ke-size="size16">그리고 그 읽기를 <b>Note</b>로 다듬고, 마지막에는 <b>HAVE+</b>를 통해 새로운 삶의 설계로 이어 갑니다.</p>
+</section>
+<!-- 6 -->
+<section class="rl-section">
+<h2 data-ke-size="size26">6. 4번째 계절의 한 문장</h2>
+<div class="rl-one-line">📌 4번째 계절은 현재를 제대로 읽고, 다가오는 새로운 삶을 설계하는 지식 아카이브입니다.</div>
+<p data-ke-size="size16">정리하면 4번째 계절의 구조는 다음과 같습니다.</p>
+<div class="rl-table-wrap">
+<table class="rl-table" data-ke-align="alignLeft">
+<thead>
+<tr>
+<th>축</th>
+<th>역할</th>
+<th>대표 구성</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>6 Re:Lenz</b></td>
+<td>세상을 읽는 렌즈</td>
+<td>Re:Site, Re:Read, Re:Sign, Re:Think, Re:Word, Re:Mark</td>
+</tr>
+<tr>
+<td><b>Note</b></td>
+<td>세상을 이해하는 도구</td>
+<td>문법, 독서, 문학, 문해력 한자어, 국어공방</td>
+</tr>
+<tr>
+<td><b>HAVE+</b></td>
+<td>새로운 삶의 설계</td>
+<td>몸 지킴이, 마음 지킴이, 관계 지킴이, 시간 지킴이, 재산 지킴이</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="rl-quote">6 Re:Lenz로 세상을 읽고,<br />Note로 이해의 도구를 다듬으며,<br />HAVE+로 다가오는 새로운 삶을 설계합니다.</div>
+<p data-ke-size="size16">4번째 계절은 세상을 읽는 공간이며, 동시에 새로운 삶을 준비하는 공간입니다.</p>
+<p data-ke-size="size16">지금의 계절을 제대로 읽어야 다가오는 계절을 조금 더 단단하게 맞이할 수 있습니다.</p>
+</section>
+<!-- 마무리 -->
+<section class="rl-final">
+<h2 data-ke-size="size26"><span style="color: #ffffff;">마무리 안내</span></h2>
+<p data-ke-size="size16"><b>4번째 계절</b>은 끝을 말하는 이름이 아닙니다. 현재를 다시 읽고, 다가오는 삶을 다시 설계하기 위한 이름입니다.</p>
+<p data-ke-size="size16">이곳에서는 세상을 여러 렌즈로 읽고, 이해의 도구를 다듬고, 삶의 리듬을 다시 설계합니다.</p>
+<p data-ke-size="size16">그렇게 우리는 삶을 완전히 새로 만들기보다, 지금의 삶에 맞게 다시 조율하는 법을 배워 갑니다.</p>
+</section>
+<!-- 스킨 허브 안내문 위치 기준점: 1번 글 전용 --> <!-- 1번 글은 티스토리의 .another_category 영역이 생성되지 않아 스킨 허브가 푸터 아래로 떨어질 수 있습니다.
+     아래 숨김 기준점을 두면 기존 스킨 스크립트가 이 위치 앞으로 허브 안내문을 정상 이동시킵니다. -->
+<div class="another_category post1-hub-anchor" style="display: none !important; height: 0 !important; overflow: hidden !important; margin: 0 !important; padding: 0 !important;">&nbsp;</div>
+</div>
