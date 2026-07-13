@@ -1,67 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나의 첫 웹사이트</title>
-    <style>
-        /* 웹사이트 디자인을 예쁘게 꾸미는 CSS 공간입니다 */
-        body {
-            font-family: 'Malgun Gothic', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #24292e;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        main {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4번째 계절 | 세상을 읽고 삶을 다시 조율하는 지식 아카이브</title>
+  <meta name="description" content="4번째 계절은 Re:Site, Re:Think, Re:Read, Re:Word, Re:Mark, Re:Sign과 Note, HAVE+를 연결하는 지식 아카이브입니다.">
+  <meta name="robots" content="index, follow">
+  <style>
+    :root{--ink:#263025;--muted:#667064;--line:#dfe6dc;--paper:#fbfcf8;--green:#4f6845;--deep:#2f3d2c;--soft:#eef4e9;--blue:#315f7c}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,'Malgun Gothic',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}
+    a{color:inherit} .wrap{width:min(1100px,calc(100% - 32px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(251,252,248,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    nav{display:flex;justify-content:space-between;align-items:center;min-height:66px;gap:18px}.brand{font-weight:800;text-decoration:none;letter-spacing:-.04em}.navlinks{display:flex;gap:16px;flex-wrap:wrap}.navlinks a{text-decoration:none;font-size:.92rem;color:var(--muted)}
+    .hero{padding:92px 0 72px;background:linear-gradient(135deg,#f7faF3,#edf4e8)}
+    .kicker{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--deep);color:white;font-weight:700;font-size:.82rem}
+    h1{font-size:clamp(2.35rem,7vw,5rem);line-height:1.08;letter-spacing:-.065em;margin:20px 0 22px;max-width:860px}
+    .lead{font-size:clamp(1.02rem,2vw,1.22rem);color:#4f594d;max-width:760px;margin:0 0 30px}.buttons{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:800;border:1px solid var(--green)}.btn.primary{background:var(--green);color:#fff}.btn.secondary{background:#fff;color:var(--green)}
+    section{padding:68px 0}.section-head{margin-bottom:28px}.section-head h2{font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.045em;margin:0 0 8px}.section-head p{margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;min-height:190px;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(42,60,37,.10);border-color:#b9c9b3}.label{font-size:.8rem;font-weight:900;color:var(--green);letter-spacing:.03em}.card h3{font-size:1.25rem;margin:10px 0 8px;letter-spacing:-.035em}.card p{margin:0;color:var(--muted);font-size:.95rem}
+    .wide{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.panel{background:var(--deep);color:white;border-radius:22px;padding:30px}.panel.light{background:#eef4f7;color:#203847}.panel h3{font-size:1.5rem;margin:0 0 10px}.panel p{margin:0 0 18px;color:inherit;opacity:.86}.panel a{display:inline-block;text-decoration:none;font-weight:800;border-bottom:1px solid currentColor}
+    footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted);font-size:.9rem}
+    @media(max-width:800px){.grid{grid-template-columns:1fr 1fr}.wide{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:68px}}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}.wrap{width:min(100% - 22px,1100px)}h1{font-size:2.55rem}.hero{padding-bottom:54px}.card{min-height:auto}}
+  </style>
 </head>
 <body>
+<header><div class="wrap"><nav><a class="brand" href="#top">4번째 계절</a><div class="navlinks"><a href="#lens">6 Re:Lenz</a><a href="#archive">아카이브</a><a href="https://4th-season.tistory.com/" target="_blank" rel="noopener">블로그</a></div></nav></div></header>
+<main id="top">
+  <section class="hero"><div class="wrap"><span class="kicker">6 Re:Lenz + Note + HAVE+</span><h1>세상을 읽고,<br>삶을 다시 조율합니다.</h1><p class="lead">4번째 계절은 사회·철학·고전·관계 언어·경제·상징을 여섯 개의 렌즈로 읽고, 문해력과 중년 이후의 삶을 함께 정리하는 지식 아카이브입니다.</p><div class="buttons"><a class="btn primary" href="#lens">지식 지도 보기</a><a class="btn secondary" href="https://4th-season.tistory.com/1" target="_blank" rel="noopener">프로젝트 소개</a></div></div></section>
 
-    <!-- 상단 헤더 영역 -->
-    <header role="banner">
-        <h1>✨ 나의 첫 GitHub 웹사이트</h1>
-    </header>
+  <section id="lens"><div class="wrap"><div class="section-head"><h2>6 Re:Lenz</h2><p>하나의 현상을 여섯 방향에서 다시 읽습니다.</p></div><div class="grid">
+    <a class="card" href="https://pencilgon1.tistory.com/" target="_blank" rel="noopener"><span class="label">Re:SITE</span><h3>현대사회 개념사전</h3><p>우리 사회에서 반복되는 현상과 구조를 개념으로 읽습니다.</p></a>
+    <a class="card" href="https://pencilgon4.tistory.com/" target="_blank" rel="noopener"><span class="label">Re:THINK</span><h3>현대 철학사전</h3><p>철학 개념을 정답이 아니라 현실을 다시 묻는 렌즈로 사용합니다.</p></a>
+    <a class="card" href="https://pencilgon4.tistory.com/" target="_blank" rel="noopener"><span class="label">Re:READ</span><h3>고전 새로 읽기</h3><p>고전의 원문과 문맥을 오늘의 언어로 천천히 다시 읽습니다.</p></a>
+    <a class="card" href="https://pencilgon0.tistory.com/" target="_blank" rel="noopener"><span class="label">Re:WORD</span><h3>관계 언어 사전</h3><p>같은 말도 관계와 상황에 따라 어떻게 달라지는지 살핍니다.</p></a>
+    <a class="card" href="https://pencilgon1.tistory.com/" target="_blank" rel="noopener"><span class="label">Re:MARK</span><h3>쉬운 경제사전</h3><p>경제 용어가 실제 생활과 선택에 미치는 영향을 설명합니다.</p></a>
+    <a class="card" href="https://pencilgon0.tistory.com/" target="_blank" rel="noopener"><span class="label">Re:SIGN</span><h3>현대 상징사전</h3><p>사물과 이미지, 관습 속에 쌓인 의미와 기억을 해석합니다.</p></a>
+  </div></div></section>
 
-    <!-- 본문 영역 (하나의 메인 랜드마크 규칙 적용) -->
-    <main role="main">
-        <h2>안녕하세요! 반가워요. 👋</h2>
-        <p>이 페이지는 GitHub Pages를 통해 전 세계에 무료로 배포된 저의 첫 번째 HTML 페이지입니다.</p>
-        
-        <hr>
-
-        <h3>앞으로 채워나갈 내용들</h3>
-        <ul>
-            <li>나를 소개하는 멋진 글 쓰기</li>
-            <li>좋아하는 사진이나 이미지 넣기</li>
-            <li>나만의 포트폴리오 링크 연결하기</li>
-        </ul>
-    </main>
-
-    <!-- 하단 푸터 영역 -->
-    <footer role="contentinfo">
-        <p>© 2026 내이름. All rights reserved.</p>
-    </footer>
-
+  <section id="archive"><div class="wrap"><div class="section-head"><h2>읽기에서 삶으로</h2><p>지식은 이해에 머물지 않고 생활의 방향과 연결됩니다.</p></div><div class="wide">
+    <div class="panel"><h3>Note · 디지털 국어 도서관</h3><p>문법, 독서, 작문, 문학과 문해력을 체계적으로 정리한 도구형 아카이브입니다.</p><a href="https://gugeoro.tistory.com/" target="_blank" rel="noopener">Note 둘러보기 →</a></div>
+    <div class="panel light"><h3>HAVE+</h3><p>몸·마음·관계·시간·재산과 평생학습을 통해 중년 이후의 삶을 다시 갖추어 갑니다.</p><a href="https://pencilgon2.tistory.com/" target="_blank" rel="noopener">HAVE+ 읽기 →</a></div>
+  </div></div></section>
+</main>
+<footer><div class="wrap">© 2026 4th-season. 세상을 읽는 여섯 개의 렌즈와 삶의 기록.</div></footer>
 </body>
 </html>
