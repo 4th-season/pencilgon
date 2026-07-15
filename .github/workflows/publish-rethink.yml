@@ -1,10 +1,11 @@
-name: Publish ReThink
+name: Publish knowledge collections
 
 on:
   push:
     branches: [main]
     paths:
       - 'articles/rethink/**'
+      - 'articles/resite/**'
       - '.github/workflows/publish-rethink.yml'
   workflow_dispatch:
 
@@ -26,8 +27,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Assemble public site
+        run: |
+          mkdir -p public/resite
+          cp -R articles/rethink/. public/
+          cp -R articles/resite/. public/resite/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: articles/rethink
+          path: public
       - id: deployment
         uses: actions/deploy-pages@v4
