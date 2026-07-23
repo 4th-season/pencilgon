@@ -25,12 +25,27 @@
 - [마스터 계획](./old-newbie-relife-tuneup/MASTER_PLAN.md)
 - [실행 체크리스트](./old-newbie-relife-tuneup/TODO.md)
 
+### Re:Word · 관계의 장면
+
+- 폴더: `reword-relationship-scenes/`
+- 신규 발행 대상: https://old-newbie.tistory.com/
+- 상태: 통합 심화편 35편 기획 확정
+- 핵심 방향: 개별 감정어·표현을 재설명하지 않고 관계 상황을 중심으로 감정·말·해석·관계 변화를 통합 분석
+- 편성: 7개 상황군 × `상황 사례형 4편 + 통합 분석형 1편`
+- 기존 자산: 감정 문해사전과 7개 관계언어 지도는 기존 URL을 유지하고 근거층·연결층으로 활용
+
+문서:
+
+- [35편 마스터 기획](./reword-relationship-scenes/MASTER_PLAN.md)
+- [35편 상세 연결표](./reword-relationship-scenes/ARTICLE_PLAN_35.md)
+
 ## 향후 추가할 계획 폴더 예시
 
 ```text
 rebuild-plans/
 ├─ README.md
 ├─ old-newbie-relife-tuneup/
+├─ reword-relationship-scenes/
 ├─ insite/
 ├─ note-literacy/
 ├─ resign/
