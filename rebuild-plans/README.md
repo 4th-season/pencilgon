@@ -39,6 +39,18 @@
 - [35편 마스터 기획](./reword-relationship-scenes/MASTER_PLAN.md)
 - [35편 상세 연결표](./reword-relationship-scenes/ARTICLE_PLAN_35.md)
 
+### Re:Think · 현대철학사전 연속 작업
+
+- 폴더: `rethink-modern-philosophy/`
+- 대상 블로그: https://pencilgon.tistory.com/
+- 상태: 083 오해 초안까지 작성, 다음 시작 084 은유
+- 핵심 방향: 철학 개념을 정답으로 제시하지 않고 삶의 장면과 사회의 판단 기준을 다시 묻게 하는 완성형 티스토리 HTML 연재
+- 기준문서: `ReThink_현대철학사전_5갈래_작업트리_H1_블로그재점검판.docx`
+
+문서:
+
+- [작업 인수인계·품질 기준](./rethink-modern-philosophy/HANDOFF.md)
+
 ## 향후 추가할 계획 폴더 예시
 
 ```text
@@ -46,6 +58,7 @@ rebuild-plans/
 ├─ README.md
 ├─ old-newbie-relife-tuneup/
 ├─ reword-relationship-scenes/
+├─ rethink-modern-philosophy/
 ├─ insite/
 ├─ note-literacy/
 ├─ resign/
@@ -53,4 +66,4 @@ rebuild-plans/
 └─ fourth-season-independent/
 ```
 
-마지막 수정: 2026-07-23
+마지막 수정: 2026-07-26
